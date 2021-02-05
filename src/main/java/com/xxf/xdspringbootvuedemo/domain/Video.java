@@ -1,47 +1,55 @@
 package com.xxf.xdspringbootvuedemo.domain;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
+import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
+/**
+ *  小滴课堂 视频对象
+ *
+ *  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+ *   `title` varchar(524) DEFAULT NULL COMMENT '视频标题',
+ *   `summary` varchar(1026) DEFAULT NULL COMMENT '概述',
+ *   `cover_img` varchar(524) DEFAULT NULL COMMENT '封面图',
+ *   `price` int(11) DEFAULT NULL COMMENT '价格,分',
+ *   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+ *   `point` double(11,2) DEFAULT '8.70' COMMENT '默认8.7，最高10分',
+ */
 public class Video {
 
-    private int id;
 
-    @Autowired
+    private Integer id;
+
     private String title;
 
 
-    public void init(){
-        System.out.println("video类 init 方法被调用");
+    private String summary;
+
+
+    private String coverImg;
+
+    private Integer  price;
+
+
+    private Date createTime;
+
+
+    private Double point;
+
+    public List<Chapter> getChapterList() {
+        return chapterList;
     }
 
-
-    public void destroy(){
-        System.out.println("video类 destroy 方法被调用");
+    public void setChapterList(List<Chapter> chapterList) {
+        this.chapterList = chapterList;
     }
 
+    private List<Chapter> chapterList;
 
-    public Video(){
-
-        System.out.println("video 空构造函数被调用");
-
-    }
-
-    public Video(String title){
-        //System.out.println("video 带参数构造函数被调用");
-        this.title = title;
-    }
-
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
-        //System.out.println("Video setId方法被调用");
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -49,10 +57,60 @@ public class Video {
         return title;
     }
 
-
     public void setTitle(String title) {
-
-        //System.out.println("Video setTitle方法被调用");
         this.title = title;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public String getCoverImg() {
+        return coverImg;
+    }
+
+    public void setCoverImg(String coverImg) {
+        this.coverImg = coverImg;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Double getPoint() {
+        return point;
+    }
+
+    public void setPoint(Double point) {
+        this.point = point;
+    }
+
+    @Override
+    public String toString() {
+        return "Video{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", summary='" + summary + '\'' +
+                ", coverImg='" + coverImg + '\'' +
+                ", price=" + price +
+                ", createTime=" + createTime +
+                ", point=" + point +
+                '}';
     }
 }

@@ -1,16 +1,16 @@
 package com.xxf.xdspringbootvuedemo.service;
 
-import com.xxf.xdspringbootvuedemo.domain.Video;
 
-/**
- * @Author:rooten
- * @Date:2021/1/28
- * @Description:
- */
+import com.xxf.xdspringbootvuedemo.domain.Video;
+import com.xxf.xdspringbootvuedemo.domain.VideoBanner;
+
+import java.util.List;
+
 public interface VideoService {
 
-    int save(Video video);
+    List<Video> listVideo();
 
-    Video findById(int id);
+    Video findDetailById(int videoId);
 
+    List<VideoBanner> listBanner();
 }
