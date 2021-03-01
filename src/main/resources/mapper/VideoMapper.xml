@@ -6,6 +6,9 @@
         select  * from video
     </select>
 
+    <select id="findById" resultType="Video">
+        select * from video where id=#{video_id}
+    </select>
     <select id="listVideoBanner" resultType="VideoBanner">
         select  * from video_banner order by weight asc
     </select>

@@ -1,4 +1,7 @@
-package com.xxf.xdspringbootvuedemo.domain;
+package com.xxf.xdspringbootvuedemo.model.entity;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 import java.util.List;
@@ -25,15 +28,23 @@ public class Video {
     private String summary;
 
 
+    @JsonProperty("cover_img")
     private String coverImg;
 
     private Integer  price;
 
 
+    @JsonProperty("create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createTime;
 
 
     private Double point;
+
+
+    @JsonProperty("chapter_list")
+    private List<Chapter> chapterList;
+
 
     public List<Chapter> getChapterList() {
         return chapterList;
@@ -42,8 +53,6 @@ public class Video {
     public void setChapterList(List<Chapter> chapterList) {
         this.chapterList = chapterList;
     }
-
-    private List<Chapter> chapterList;
 
     public Integer getId() {
         return id;

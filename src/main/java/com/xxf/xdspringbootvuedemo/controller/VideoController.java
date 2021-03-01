@@ -1,8 +1,8 @@
 package com.xxf.xdspringbootvuedemo.controller;
 
 
-import com.xxf.xdspringbootvuedemo.domain.Video;
-import com.xxf.xdspringbootvuedemo.domain.VideoBanner;
+import com.xxf.xdspringbootvuedemo.model.entity.Video;
+import com.xxf.xdspringbootvuedemo.model.entity.VideoBanner;
 import com.xxf.xdspringbootvuedemo.service.VideoService;
 import com.xxf.xdspringbootvuedemo.utils.JsonData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class VideoController {
      * 轮播图列表
      * @return
      */
-    @GetMapping("list_banner")
+    @GetMapping("/list_banner")
     public JsonData indexBanner(){
 
 
@@ -41,7 +41,7 @@ public class VideoController {
      * 视频列表
      * @return
      */
-    @RequestMapping("list")
+    @RequestMapping("/list")
     public JsonData listVideo(){
 
         List<Video> videoList = videoService.listVideo();
@@ -54,7 +54,7 @@ public class VideoController {
      * @param videoId
      * @return
      */
-    @GetMapping("find_detail_by_id")
+    @GetMapping("/find_detail_by_id")
     public JsonData findDetailById(@RequestParam(value="video_id",required = true) int videoId) {
 
         Video video = videoService.findDetailById(videoId);

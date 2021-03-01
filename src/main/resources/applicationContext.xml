@@ -8,7 +8,7 @@
        <!--xmlns:aop="http://www.springframework.org/schema/aop">-->
 
 
-    <!--&lt;!&ndash;<bean id="video2" class="net.xdclass.sp.domain.Video" scope="singleton" init-method="init" destroy-method="destroy">&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean id="video2" class="net.xdclass.sp.model.Video" scope="singleton" init-method="init" destroy-method="destroy">&ndash;&gt;-->
 
         <!--&lt;!&ndash;<property name="id" value="9"/>&ndash;&gt;-->
         <!--&lt;!&ndash;<property name="title" value="Spring 5.X课程" />&ndash;&gt;-->
@@ -19,7 +19,7 @@
     <!--&lt;!&ndash;<bean class="net.xdclass.sp.processor.CustomBeanPostProcessor"/>&ndash;&gt;-->
     <!--&lt;!&ndash;<bean class="net.xdclass.sp.processor.CustomBeanPostProcessor2"/>&ndash;&gt;-->
 
-    <!--&lt;!&ndash;<bean id="video2" class="net.xdclass.sp.domain.Video2" scope="singleton" parent="video">&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean id="video2" class="net.xdclass.sp.model.Video2" scope="singleton" parent="video">&ndash;&gt;-->
 
         <!--&lt;!&ndash;<property name="summary" value="这个是summary"></property>&ndash;&gt;-->
 
@@ -29,8 +29,8 @@
 
     <!--&lt;!&ndash;设置两个bean的关系，video要先于videoOrder实例化&ndash;&gt;-->
 
-    <!--&lt;!&ndash;<bean id="videoOrder" class="net.xdclass.sp.domain.VideoOrder" autowire="byName">&ndash;&gt;-->
-    <!--&lt;!&ndash;<bean id="videoOrder" class="net.xdclass.sp.domain.VideoOrder" autowire="byType">&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean id="videoOrder" class="net.xdclass.sp.model.VideoOrder" autowire="byName">&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean id="videoOrder" class="net.xdclass.sp.model.VideoOrder" autowire="byType">&ndash;&gt;-->
 
 
     <!--<bean id="timeHandler" class="com.xxf.xdspringbootvuedemo.aop.TimeHandler"/>-->

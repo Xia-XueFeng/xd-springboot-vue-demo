@@ -2,8 +2,10 @@ package com.xxf.xdspringbootvuedemo.mapper;
 
 
 
-import com.xxf.xdspringbootvuedemo.domain.Video;
-import com.xxf.xdspringbootvuedemo.domain.VideoBanner;
+import com.xxf.xdspringbootvuedemo.model.entity.Video;
+import com.xxf.xdspringbootvuedemo.model.entity.VideoBanner;
+import com.xxf.xdspringbootvuedemo.model.entity.Video;
+import com.xxf.xdspringbootvuedemo.model.entity.VideoBanner;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -21,4 +23,6 @@ public interface VideoMapper{
     List<VideoBanner> listVideoBanner();
 
     Video findDetailById(@Param("video_id") int videoId);
+
+    Video findById(int videoId);
 }

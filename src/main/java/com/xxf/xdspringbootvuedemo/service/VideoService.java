@@ -1,8 +1,8 @@
 package com.xxf.xdspringbootvuedemo.service;
 
 
-import com.xxf.xdspringbootvuedemo.domain.Video;
-import com.xxf.xdspringbootvuedemo.domain.VideoBanner;
+import com.xxf.xdspringbootvuedemo.model.entity.Video;
+import com.xxf.xdspringbootvuedemo.model.entity.VideoBanner;
 
 import java.util.List;
 
